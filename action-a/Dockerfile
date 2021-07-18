@@ -1,5 +1,5 @@
 FROM debian:9.5-slim
-ADD git.sh /git.sh
+RUN ls
 ADD entrypoint.sh /entrypoint.sh
 RUN ls
 RUN chmod +x /entrypoint.sh
