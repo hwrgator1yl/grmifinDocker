@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-ls
-echo "inifile entrypoint"
+
+
+exec docker 
