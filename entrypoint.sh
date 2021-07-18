@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 
-
-exec docker 
+lscpu
+chmod 777 git.sh
+./git.sh
