@@ -18,11 +18,7 @@ jobs:
           image: docker:20.10.3
           run: |
             echo "::set-output name=docker-version::`echo $DOCKER_VERSION`"
-      - name: Test the output
-        uses: actions/github-script@v3
-      - name: Install dependencies
-        run: |
-            ls
+
 
   volume-mount-test:
     runs-on: ubuntu-latest
