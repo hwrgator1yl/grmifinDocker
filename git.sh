@@ -1,1 +1,0 @@
-echo "ini file git.sh"
