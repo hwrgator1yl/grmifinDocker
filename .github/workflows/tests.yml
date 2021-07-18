@@ -12,8 +12,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile 
-
+    - name: Validate policies
+      uses: gbaeke/kyverno-action@v1.0.0
+      with:
+        command: |
+           kyverno apply ./policies --resource=./deploy/deployment.yaml
