@@ -13,9 +13,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run docker action and set output for testing
         uses: ./
-        id: run-docker
-        with:
-          image: docker:20.10.3
-          run: |
-            echo "`echo $DOCKER_VERSION`"
+
 
