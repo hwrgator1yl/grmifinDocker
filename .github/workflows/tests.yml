@@ -1,21 +1,19 @@
-name: Docker Run Action Tests
+name: Docker Image CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  smoke-test:
+
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Run docker action and set output for testing
-        uses: ./
-        id: run-docker
-        with:
-          image: docker:20.10.3
-          run: |
-            echo "`echo $DOCKER_VERSION`"
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile 
 
