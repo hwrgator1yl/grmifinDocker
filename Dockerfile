@@ -1,6 +1,6 @@
-FROM docker:20.10
+FROM ubuntu:20.04
 
-RUN apk add bash
+
 RUN ls
 COPY entrypoint.sh /entrypoint.sh
 RUN ls
