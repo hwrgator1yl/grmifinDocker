@@ -17,3 +17,8 @@ jobs:
     - name: Build the Docker image
       run: docker build -t DOCKER_HUB_USER/kyverno-action:v1.0.0 .
 
+    - name: Validate policies
+      uses: gbaeke/kyverno-action@v1.0.0
+      with:
+        command: |
+           kyverno apply ./policies --resource=./deploy/deployment.yaml
